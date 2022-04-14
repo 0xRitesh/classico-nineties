@@ -1,0 +1,102 @@
+@import "../../styles/breakpoints";
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    font-size: 1rem;
+    color: #ffffff;
+
+    @include respondMax('sm-tablet') {
+      font-size: 0.9rem;
+    }
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    height: fit-content;
+    background: #171616;
+    border: none;
+    width: 40px;
+
+    @include respondMax('sm-tablet') {
+      width: 35px;
+    }
+  }
+
+  .hamburger__bar {
+    width: 35px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 0.3rem 0;
+
+    width: 30px;
+  }
+
+  .hamburger--expanded {
+    min-height: 6px;
+
+    .hamburger__bar {
+      width: 25px;
+      transition: all ease-in 0.2s, transform ease-in 0.2s;
+    }
+
+    .hamburger__bar:nth-child(1) {
+      transform: rotate(45deg) translateY(calc(0.3rem + 3px));
+    }
+
+    .hamburger__bar:nth-child(2) {
+      transform: rotate(-45deg) translateY(calc(-0.3rem - 3px));
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .menu {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    transition: all ease-in 0.2s;
+  }
+
+  .menu--hidden {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+
+  .menu__item {
+    margin-right: 1rem;
+
+    @include respondMax('sm-tablet') {
+      margin-right: 0.7rem;
+    }
+  }
+
+  .menu__link {
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-decoration-color: #6a6a6a;
+    text-decoration-style: wavy;
+    transition: color ease-in 0.2s;
+
+    @include respondMax('sm-tablet') {
+      font-size: 0.75rem;
+    }
+
+    &:hover {
+      color: #6a6a6a;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.App {
+  padding: 1.5rem 5% 2.5rem;
+  max-width: 1500px;
+  margin: auto;
+  position: relative;
+  overflow-x: hidden;
+
+  @include respondMax('lg-tablet') {
+    padding: 1.5rem 2rem 2.5rem;
+  }
+}
+
+.btn {
+  background: transparent;
+  font-size: 1rem;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 0.9rem 2.5rem;
+  width: fit-content;
+  cursor: pointer;
+  transition: all linear 0.3s;
+
+  @include respondMax('tablet') {
+    font-size: 0.8rem;
+    padding: 0.8rem 2rem;
+  }
+
+  &:hover {
+    background: #ffffff;
+    color: #000000;
+  }
+}
