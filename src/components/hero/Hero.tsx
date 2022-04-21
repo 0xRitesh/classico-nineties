@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="hero__section hero__section--model">
         <img src={Model} alt="klosette model" className="hero__model" />
         <div className="hero__model-label hero__model-label--forward">
-          Haute Couture
+          Classico Nineties
         </div>
         <div className="hero__model-label hero__model-label--behind"></div>
       </div>
